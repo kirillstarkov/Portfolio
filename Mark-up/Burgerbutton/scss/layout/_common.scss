@@ -1,0 +1,164 @@
+
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 15px 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include media ('>=tablet') {
+		flex-direction: row;
+		padding: 15px 5%;
+	}
+
+	.article {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		color: rgba(65, 61, 75, 0.8);
+
+		@include media ('>=tablet') {
+			padding: 0 0 0 100px ;
+			display: block;
+		}
+
+		p {
+			margin-bottom: 25px;
+		}
+
+		h4 {
+			color: #413d4b;
+			text-transform: uppercase;
+			margin-bottom: 25px;
+		}
+
+	}
+
+	.logo {
+		display: block;
+		width: 155px;
+
+		@include media ('>=tablet') {
+			width: 235px;
+		}
+	}
+}
+
+.slider {
+	position: relative;
+	width: 100%;
+	height: 85.6vh;
+	background-size: cover; 
+	background-position: center;
+	margin-bottom: 60px;
+	padding: 80px 20px 80px 20px;
+	color: $white;
+
+	@include media ('>=tablet') {
+		padding: 80px 100px 80px 100px;
+	}
+
+	@include media ('>=desktop') {
+		padding: 100px 20%;
+	}
+
+	.slick-list {
+		@extend %height;
+	}
+
+	.slick-track {
+		@extend %height;
+	}
+
+	.slick-slide {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.slick-dots {
+		list-style: none;
+		display: flex;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		bottom: 5%;
+		left: 50%;
+		transform: translateX(-50%);
+
+		li {
+			margin: 5px;
+			font-size: 0;
+		}
+
+		button {
+			border: solid 1px $white;
+			border-radius: 100%;
+			background-color: transparent;
+			width: 13px;
+			height: 13px;
+			margin: 0;
+			padding: 0;
+			cursor: pointer;
+			transition: box-shadow .5s, border .5s;
+
+			&:hover {
+				@include dots-style-primary;
+			}
+		}
+	}
+
+	.slick-active {
+		button {
+			@include dots-style-primary;
+		}
+	}
+		
+	h1 {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	p {
+		text-align: center;
+		margin-bottom: 65px;
+		padding-top: 20px;
+
+		&::before {
+			content: '';
+			display: block;
+			position: relative;
+			top: -20px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 50px;
+			height: 1px;
+			background-color: $acuablue;
+		}
+
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(to top, #09052f, #311d5e);
+		opacity: 0.8;
+	}
+}

@@ -1,0 +1,150 @@
+.header {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 15px 10px;
+
+	@include media ('>=tablet') {
+		padding: 15px 15px;
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	@include media ('>=desktop') {
+		padding: 15px 20%;
+	}
+
+	.hero {
+		width: 128px;
+		height: 50px;
+		display: block;
+	}
+}
+
+
+.header-holder {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+
+	@include media ('>=tablet') {
+		display: block;
+	}
+}
+
+.menu-opener {
+	display: inline-block;
+	vertical-align: top;
+	width: 40px;
+	height: 40px;
+	background-color: $acuablue;
+	position: relative;
+	border-radius: 3px;
+
+	@include media ('>=tablet') {
+		display: none;
+	}
+
+	span,
+	&::before,
+	&::after {
+		background: $white;
+		border-radius: 4px;
+		position: absolute;
+		top: 50%;
+		left: 25%;
+		right: 25%;
+		height: 4px;
+		margin-top: -2px;
+		transition: all .3s linear;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		top: 30%;
+	}
+
+	&::after {
+		top: 70%;
+	}
+
+	.burger & span {
+		opacity: 0;
+	}
+
+	.burger &::after,
+	.burger &::before{
+		transform: rotate(45deg);
+		top: 50%;
+		left: 15%;
+		right: 15%;
+	}
+
+	.burger &::after {
+		transform: rotate(-45deg);
+	}
+}
+
+.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: 0;
+	transform: scale(0.9);
+	opacity: 0;
+	visibility: hidden;
+	transform: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
+
+	@include media ('>=tablet') {
+		opacity: 1;
+		visibility: visible;
+		display: flex;
+		position: static;
+	}
+
+	@include media ('<tablet'){
+		a {
+		background-color: rgba(#09052f, .9);
+		transition: background-color .3s;
+
+		&:hover {
+			background-color: #311d5e;
+		}
+		}
+	}
+
+	.burger &{
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+
+	.active {
+		color: $acuablue;
+		border-bottom: 2px $acuablue solid;
+	}
+
+	a {
+		color: $white;
+		text-decoration: none;
+		display: block;
+		padding: 10px;
+		font-weight: 900;
+		text-transform: uppercase;
+		transition: color .3s;
+
+		&:hover {
+			color: $acuablue;
+		}
+	}
+
+
+}

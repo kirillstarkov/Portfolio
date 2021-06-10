@@ -1,0 +1,193 @@
+.card {
+
+	.icon-side {
+		position: absolute;
+		font-size: 32px;
+		top: 10%;
+		right: 5%;
+	}
+
+	&:hover {
+		.card-text {
+			position: relative;
+			z-index: 2;
+			box-shadow: 0 0 20px rgba($black, .5);
+		}
+	}
+
+	@include media('>=tablet') {
+		display: flex;
+	}
+}
+
+.card-img {
+	position: relative;
+	color: $coral;
+	background-size: cover;
+	background-position: center;
+	height: 400px;
+
+
+	.clrwhite {
+		color: $white;
+	}
+
+	.overlay {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		bottom: 10%;
+
+		p {
+			margin-right: 4px;
+			margin-bottom: 0;
+		}
+
+		&.right {
+			right: 5%;
+		}
+
+		&.left {
+			left: 5%;
+		}
+
+		i {
+			font-size: 30px;
+		}
+	}
+
+	.status {
+		color: $white;
+		text-transform: uppercase;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+		padding: 0 20px;
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		top: 10%;
+		width: 100%;
+
+		div {
+			display: flex;
+			align-items: center;
+
+		}
+
+		p {
+			margin-right: 8px;
+			margin-bottom: 0;
+		}
+
+		i {
+			font-size: 20px;
+		}
+	}
+
+	@include media('>=tablet') {
+		flex-grow: 3;
+		height: auto;
+		min-width: 60%;
+	}
+
+}
+
+.card-text {
+	padding: 50px 20px;
+	background-color: $white;
+	text-align: left;
+	position: relative;
+	color: #656e74;
+	transition: box-shadow .5s;
+
+
+	.hdr {
+		margin-top: 0;
+		color: $coral;
+		text-transform: uppercase;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+	}
+
+	h1, h2 {
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+
+	h2 {
+		color: $olive;
+	}
+
+	p {
+		margin-top: 25px;
+	}
+
+	a {
+		color: $olive;
+		text-decoration: underline;
+		transition: color .4s;
+
+		&:hover {
+			color: darken($olive, 15%);
+			text-decoration: none;
+		}
+	}
+
+
+	&.center{
+		text-align: center;
+	}
+
+	&.green {
+		background-color: $olive;
+		color: $white;
+		
+		.hdr {
+			color: $white;
+		}
+
+		h2 {
+			color: $white;
+		}
+	}
+
+	@include media('>=tablet') {
+		flex-grow: 1;
+		min-width: 25%;
+		padding: 50px 30px;
+	}
+}
+
+.row {
+
+	@include media('>=tablet') {
+		display: flex;
+
+		.card {
+			display: flex;
+			height: auto;
+			flex-direction: column;
+
+		}
+
+		.card-img {
+			min-height: 400px;
+		}
+
+	}
+
+	.card-1 {
+		@include media('>=tablet') {
+			flex-grow: 1;
+			min-width: 25%;
+		}
+	}
+
+	.card-2 {
+		@include media('>=tablet') {
+			flex-grow: 1;
+			min-width: 60%;
+		}
+	}
+}
+

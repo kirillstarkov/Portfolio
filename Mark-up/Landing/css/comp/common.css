@@ -1,0 +1,293 @@
+.wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.section img,
+.card img {
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1280px;
+	margin: 0px auto;
+}
+
+.breadcrumbs {
+	margin: 0;
+	margin-left: 80px;
+	margin-bottom: 80px;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.breadcrumbs li {
+	padding-right: 10px;
+	color: #78909c;
+}
+
+.breadcrumbs li a {
+	color: #282b2f;	
+	text-decoration: none;
+}
+
+.breadcrumbs li a:hover {
+	color: #009688;	
+}
+
+.breadcrumbs li:last-child::after {
+	display: none;
+}
+
+.breadcrumbs li::after {
+	content: '>';
+	margin-left: 10px;
+}
+
+.article {
+	flex-grow: 1;
+	width: 70%;
+	margin-bottom: 20px;
+}
+
+.aside {
+	width: 30%;
+	padding-left: 60px;
+}
+
+.card {
+	padding: 30px 0;
+}
+
+.aside .card + .card {
+	border-top: 1px solid #e0e9f0;
+}
+
+.section {
+	margin-bottom: 40px;
+}
+
+.more {
+	color: #009688;
+	font-weight: 500;
+	transition: color .3s;
+}
+
+.more:hover {
+	color: #007A6E;
+}
+
+.header {
+	background-color: #f5f8fb;
+	/*position: -webkit-sticky;*/
+	position: sticky;
+	z-index: 999;
+}
+
+.hero {
+	padding: 40px 80px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.num {
+	display: flex;
+	font-size: 20px;
+	color: #465a64;
+}
+
+.num a {
+	text-decoration: none;
+	color: #282b2f;
+	font-size: 18px;
+}
+
+.num a:hover {
+	color: #000;
+}
+
+.nav {
+	padding: 15px 80px;
+	border-top: 1px solid #e0e9f0;
+	border-bottom: 1px solid #e0e9f0;
+	background-color: #fff;
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+}
+
+.nav a {
+	color: #282b2f;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 500;
+	transition-duration: .3s;
+}
+
+
+.nav .active a {
+	text-decoration: none;
+	background-color: #00a799;
+}
+
+.nav a:hover {
+	color: #009688;
+}
+
+.form-group {
+	border-top: solid 1px #e0e9f0;
+	padding-top: 40px;
+}
+
+/* Поля формы */
+
+.form-control {
+	display: block;
+	width: 100%;
+	padding: 10px 20px;
+	border: solid 2px #e0e9f0;
+	border-radius: 5px;
+	font-weight: 300;
+	margin-bottom: 15px;
+	transition: border-color .3s;
+}
+
+.form-control:focus {
+	outline: none;
+	border-color: #009688;
+}
+
+/* Стили для кроссбраузерности placeholder полей */
+
+.form-control::-webkit-input-placeholder {
+	color: #bdc6ca;
+}
+
+.form-control::-moz-placeholder {
+	opacity: 1;
+	color: #bdc6ca;
+}
+
+.form-control:-ms-input-placeholder {
+	color: #bdc6ca;
+}
+
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	padding: 15px 80px;
+	border-radius: 4px;
+	background-color: #009688;
+	color: #fff;
+	text-decoration: none;
+	border: none;
+	line-height: 1.5;
+	outline: none;
+	transition: background-color .3s;
+}
+
+.btn:hover {
+	background-color: #007A6E;
+}
+
+.search-form {
+	position: relative;
+	margin-bottom: 35px;
+}
+
+.search-form .btn-search {
+	color: #009688;
+	border: none;
+  	background-color: transparent;
+  	background-size: 20px 20px;
+  	position: absolute;
+ 	right: 2px;
+  	bottom: 2px;
+  	top: 5px;
+  	border-radius: 0 3px 3px 0;
+  	width: 50px;
+  	font-size: 20px;
+  	padding: 0;
+  	cursor: pointer;
+  	transition: color .3s;
+}
+
+.search-form .btn-search:hover {
+  color: #A1DDD6;
+}
+
+.search-form .form-control {
+	padding-right: 65px;
+}
+
+.footer {
+	padding: 45px 80px;
+	border-top: 1px solid #e0e9f0;
+	justify-content: space-between;
+	display: flex;
+}
+
+.social-networks {
+	display: flex;
+	padding-left: 0px;
+	justify-content: center;
+	list-style: none;
+}
+
+.social-networks a {
+	color: #546e7a;
+	padding: 11px;
+	text-decoration: none;
+	font-size: 20px;
+	transition: color .3s;
+}
+
+.card time {
+	color: #bdc6ca;
+	font-size: 14px;
+}
+
+.social-networks a:hover {
+	color: #009688;
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+}
+
+.list li::before {
+	content: '-';
+	width: 12px;
+	height: 3px;
+	color: #546e7a;
+	margin-right: 10px;
+}
+
+.wlist {
+	padding-left: 20px;
+}
+
+.news {
+	background-color: transparent;
+	color: #009688;
+	padding: 17px 10px;
+	text-decoration: none;
+	width: 100%;
+	border: solid 2px #009688;
+	border-radius: 5px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	transition: background-color .3s, color .3s;
+}
+
+.news:hover {
+	background-color: #009688;
+	color: #fff;
+}

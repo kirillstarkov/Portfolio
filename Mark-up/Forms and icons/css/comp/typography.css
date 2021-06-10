@@ -1,0 +1,51 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font: 16px/1.5 Arial, Helvetica, sans-serif;
+	color: #455a63;
+	background-color: #fff;
+	min-width: 320px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+textarea {
+	font-family: sans-serif;
+}
+
+hr {
+	margin-bottom: 35px;
+}
+
+
+p, ul, ol {
+	margin: 0 0 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2;
+	margin: 0 0 .5em;
+}
+
+h1 {
+	color:  #282b2f;
+}
+
+a {
+	color: #1976d2;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}

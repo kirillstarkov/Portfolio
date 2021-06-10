@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script defer src="./main.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <style>
+        input{
+            padding: 4px;
+            border-radius: 4px;
+            margin: 5px 0;
+            display: block;
+        }
+        .photo-container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Photo Gallery!</h1>
+    <label>
+        Enter the id of photo
+        <input id="photoInput" type="number" name="photo-id">
+    </label>
+    <button id="request">Request</button>
+    <button id="send">Send</button>
+
+    <div class="photo-container">
+
+    </div>
+</body>
+
+</html>

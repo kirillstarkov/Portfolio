@@ -1,0 +1,35 @@
+// пример использования media (breakpoints в верху файла)
+body {
+	
+}
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@include media ('>=tablet') {
+		.row {
+		flex-wrap: nowrap;
+		display: flex;
+		padding: 0 15px;
+		justify-content: space-between;
+		}
+
+		.col {
+			width: 33%;
+			padding: 0 10px;
+		}
+
+	}
+}
+
+.box {
+	@extend %flexcenter;
+	flex-wrap: wrap;
+}

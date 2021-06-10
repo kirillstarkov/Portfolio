@@ -1,0 +1,101 @@
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.bgcolor {
+	background-color: #262d34; 
+}
+
+.nav {
+	padding-left: 0px;
+	background-color: #ff1744;
+	font-size: 0px;
+}
+
+.nav a {
+	font-weight: 700;
+	color: #fff;
+	padding: 10px;
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.nav li {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+}
+
+.nav li.active a {
+	text-decoration: none;
+	background-color: #99001e;
+}
+
+.nav a:hover {
+	background-color: #99001e;
+}
+
+.margin {
+	margin: 0 auto;
+	width: 980px;
+}
+
+.bgwhite {
+	background-color: #fff;
+}
+
+.intro {
+	padding: 50px 50% 55px 29px;
+	color: #fff;
+	margin-bottom: 84px;
+}
+
+.intro h1 {
+	text-shadow: 0 2px 0 #727272;
+}
+
+.intro h1:first-letter {
+	color: #ff1744;
+}
+
+.content {
+	margin: 0 auto;
+	width: calc(100% - 146px - 145px);
+}
+
+.content h2 {
+	color: #a5adb8;
+}
+
+.content h2:first-letter {
+	color: #ff1744;
+}
+
+.row {
+	margin: 0 -8px;
+}
+
+.row::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.col {
+	width: calc(33.33% - 15px);
+	float: left;
+	margin: 0px;
+	padding: 0 8px;
+}
+
+.list {
+	padding-left: 16px;
+}
+
+.list ul {
+	list-style: disc;
+	padding-left: 16px;
+}

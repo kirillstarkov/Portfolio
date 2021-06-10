@@ -1,0 +1,268 @@
+// пример использования media (breakpoints в верху файла)
+body {
+	
+}
+
+.intro {
+	position: relative;
+	height: 100vh;
+	background-size: cover;
+	background-position: 50% 0;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		right: 0;
+		height: 100px;
+		background-color: rgba($coral, .3);
+		transform: skewY(-4deg);
+
+		@include media('>=tablet') {
+			height: 200px;
+			bottom: -80px;
+		}
+	}
+
+}
+
+.slogan {
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+
+	@include media ('>=tablet') {
+		bottom: 150px;
+		left: 110px;
+	}
+
+	h1 {
+		color: $white;
+		font-family: 'Avenir Next Rounded Std';
+		font-weight: 400;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+
+		&::after {
+			content: '/';
+			color: $olive;
+		}
+	}
+
+	p {
+		font-size: 15px;
+		font-weight: 700;
+		color: $white;
+		padding-left: 160px;
+		text-transform: uppercase;
+
+		&::after {
+			content: '/';
+			color: $coral;
+		}
+	}
+}
+
+.outro {
+	position: relative;
+	min-height: 90vh;
+	background-size: cover;
+	background-position: 50% 0;
+	overflow: hidden;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		right: 0;
+		height: 100px;
+		background-color: #0d1119;
+
+		@include media('>=tablet') {
+			height: 150px;
+			bottom: -80px;
+		}
+	}
+
+	&::before{
+		transform: skewY(-4deg);
+	}
+
+	&::after{
+		transform: skewY(4deg);
+	}
+
+	span {
+		position: absolute;
+		z-index: 2;
+		bottom: -70px;
+		left: 0;
+		right: 0;
+		height: 80px;
+		background-color: $coral;
+		transform: skewY(2deg);
+	}
+
+	.outro-text {
+		color: $white;
+		padding: 10px 20px;
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		top: 120px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		h1 {
+			font-size: 45px;
+			font-weight: 400;
+		}
+
+		@include media ('>=tablet') {
+			padding: 20px 40px;
+			top: 200px;
+		}
+	}
+}
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.bggreen {
+	background-color: $olive;
+
+		div:nth-child(2n) {
+			flex-direction: row-reverse;
+			}
+}
+
+.bgcoral {
+	background-color: $coral;
+}
+
+.info {
+	padding-top: 80px;
+	
+
+	@include media('>=tablet') {
+		padding-top: 100px;
+		display: flex;
+		margin-bottom: 100px;
+	}
+
+	.box {
+	position: relative;
+	margin-bottom: 30px;
+	padding: 0 20px;
+	font-family: 'Proxima Nova';
+	font-weight: 400;
+
+	h3 {
+		font-family: 'Open sans';
+		color: #0a1f3f;
+		margin-top: 23px;
+		margin-bottom: 32px;
+	}
+
+	i {
+		font-size: 40px;
+	}
+
+	a {	
+		color: #00aeef;
+		text-decoration: none;
+		transition: color .3s;
+
+		@include media ('>=tablet') {
+			position: absolute;
+			bottom: -28px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&:hover {
+			color: darken(#00aeef, 15%);
+		}
+
+		&::after {
+			content: ' →';
+		}
+	}
+
+	@include media ('>=tablet') {
+		width: 25%;
+
+		}
+	}
+}
+
+
+
+// Обертка для полей формы
+
+.form-group {
+	margin-bottom: 15px;
+	font-family: 'Proxima Nova';
+	font-weight: 400;
+
+	@include media('>=tablet') {
+		width: 100%;
+		margin-top: 50px;
+	}
+
+	.w25 {
+		@include media('>=tablet') {
+		width: 25%;
+		}
+	}
+
+	.w50 {
+		@include media('>=tablet') {
+		width: 50%;
+		flex-grow: 1;
+		}
+	}
+
+	@include media('>=tablet') {
+			display: flex;
+		}
+}
+
+// Поля формы
+
+.form-control {
+	border-radius: 5px;
+	display: block;
+	width: 100%;
+	padding: 10px 15px;
+	margin-bottom: 10px;
+
+	@include media('>=tablet') {
+		margin-bottom: 0;
+		margin-right: 10px;
+	}
+
+}
+
+.form-control {
+	@include placeholder {
+		color: #83969f;
+	}
+
+	&:focus {
+		border-color: $yellow;
+	}
+}
+

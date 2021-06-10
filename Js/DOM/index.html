@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+    <main>
+        <div class="control-panel">
+            <button id="btn-add-start" class="btn btn-add" >Add at start</button>
+            <button id="btn-add-end" class="btn btn-add" >Add at end</button>
+            <button id="btn-remove" class="btn btn-remove" >Remove </button>
+            <button id="btn-refresh" class="btn btn-refresh" >Refresh </button>
+            <button id="btn-sort" class="btn btn-sort" >Sort</button>
+        </div>
+        <div class="content">
+            <div class="form">
+                <form id = "human-form" name="human-form">
+                    <label>First Name<input type="text" name="firstName"></label>
+                    <div class="message" data-for="firstName"></div>
+                    <label>Last Name<input type="text" name="lastName"></label>
+                    <div class="message" data-for="lastName"></div>
+                    <label>Age<input type="number" name="age"></label>
+                    <div class="message" data-for="age"></div>
+                    <label>Id for Remove<input type="number" name="removeId"></label>
+                </form>
+            </div>
+            <div class="group">
+                <h4 id="teacher"></h4>
+                <ol id="group-list">
+                    
+                </ol>
+            </div>
+                <!-- <div class="list-item"></div> -->
+            </div>
+        </div>
+        <div id="human-container" class="list">
+    </main>
+</body>
+</html>

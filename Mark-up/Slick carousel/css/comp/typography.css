@@ -1,0 +1,67 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font: 16px/1.5 'Quattrocento Sans', sans-serif;
+	color: #000;
+	background-color: #fff;
+	min-width: 320px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+p {
+	font-weight: 400;
+}
+
+p, ul, ol {
+	margin: 0 0 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2;
+	margin: 0 0 .5em;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+h4 {
+	font-size: 22px;
+}
+
+h5 {
+	font-size: 16px;
+}
+
+h6 {
+	font-size: 14px;
+}
+
+a {
+	color: #1976d2;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}

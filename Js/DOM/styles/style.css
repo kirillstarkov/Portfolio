@@ -1,0 +1,108 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 12px;
+}
+
+.btn {
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    font-size: 1rem;
+    outline: none;
+}
+
+main {
+    padding: 10px;
+}
+
+.control-panel {
+padding: 10px;
+}
+
+.content {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+
+}
+
+.content .form {
+    margin-right: 10px;
+    font-size: 14px;
+    width: 40%;
+}
+
+.list {
+    width: 60%;
+}
+
+.list-item {
+    border-radius: 10px;
+    border: 1px dotted #ccc;
+    box-shadow: 0 2px 4px black;
+    margin: 10px 0;
+    padding: 10px 7px;
+    background: rgb(197, 227, 255);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+input, label {
+    display: block;
+    text-align: center
+}
+
+input {
+    outline: none;
+    border: 1,5px solid #000;
+    border-radius: 3px;
+    margin: 2px auto 7px;
+    padding: 5px 2px;
+    width: 80%;
+
+}
+input.error {
+    border-bottom: 3px solid red;
+}
+
+.message {
+    display: none;
+    color: white;
+}
+
+.message > span {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    background: lightcoral;
+
+}
+
+.group {
+    width: 50%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.group h4 {
+    text-align: center;
+    margin: 3px 5px;
+}
+
+.group li {
+    border-bottom: 1px solid black;
+}
+
+.group ol {
+    border: 2px solid lightblue;
+    border-radius: 8px;
+    padding: 10px 10px 10px 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

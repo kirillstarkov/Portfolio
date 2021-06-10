@@ -1,0 +1,13 @@
+/* Cтили для кроссбраузерности елементов НЕ ТРОГАЕМ */
+@import url(comp/normalize.css);
+
+/* Базовые стили для форм НЕ ТРОГАЕМ */
+@import url(comp/form.css);
+
+/* Базовые стили для типографии (изменяем от макета к макету) */
+@import url(comp/typography.css);
+
+/* Сюда пишем общие стили для проекта (изменяем от макета к макету) */
+@import url(comp/common.css);
+
+@import url(comp/icon.css);

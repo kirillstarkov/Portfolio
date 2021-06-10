@@ -1,0 +1,32 @@
+// Общие стили для кнопок 
+
+.btn {
+	transition: color .3s ease-in-out, border-color .3s ease-in-out, background-color .3s ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	vertical-align: middle;
+	padding: 10px 20px;
+	border-radius: 3px;
+	text-align: center;
+	border: none;
+	background-color: $olive;
+	color: $white;
+
+	i {
+		margin-left: 5px;
+	}
+
+	@include media('>=tablet') {
+		padding: 15px 20px;
+	}
+
+
+	&:hover {
+		color: $black;
+		background-color: lighten($coral, 15%);
+		text-decoration: none;
+		outline: none;
+	}
+
+}
