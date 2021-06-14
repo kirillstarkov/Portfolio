@@ -6,3 +6,37 @@
 .column {
     margin: 20px;
 }
+
+.list {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.list li:last-child a{
+    border: solid coral 2px;
+    border-radius: 10px;
+    transition: background-color, color 0.3s;
+}
+
+.list li:last-child a:hover{
+    background-color: coral;
+    color: white;
+}
+
+.list li {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.list a {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(62, 125, 197);
+    padding: 5px;
+    transition: color 0.5s;
+}
+
+.list a:hover {
+    color: rgb(15, 31, 63);
+}
