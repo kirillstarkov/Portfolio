@@ -11,6 +11,7 @@ export class CommpanyListComponent {
   public countries: ICountry[] = COUNTRIES.slice();
 
   addCountry(country: string, capital: string): void{
+    if(!country || capital) return;
     this.countries.push({country, capital})
   }
 

@@ -1,7 +1,7 @@
 <div class="content container">
     <h2>Click to delete</h2>
     <ol>
-        <li style="cursor: pointer" *ngFor="let country of countries" (click) = "deleteCountry(country.country)">
+        <li *ngFor="let country of countries" (click) = "deleteCountry(country.country)">
             <span>{{ country.country }}</span>
             <span> - </span>
             <b>{{ country.capital }}</b>
