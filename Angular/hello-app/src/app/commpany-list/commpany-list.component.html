@@ -1,0 +1,20 @@
+<div class="content container">
+    <h2>Click to delete</h2>
+    <ol>
+        <li style="cursor: pointer" *ngFor="let country of countries" (click) = "deleteCountry(country.country)">
+            <span>{{ country.country }}</span>
+            <span> - </span>
+            <b>{{ country.capital }}</b>
+        </li>
+    </ol>
+    
+    <form class="field">
+        <div class="field">
+            <input #country class="input" type="text" name="country" placeholder="Country">
+        </div>
+        <div class="field">
+            <input #capital class="input" type="text" name="capital" placeholder="Capital">
+        </div>    
+        <button class="button" (click)="addCountry(country.value, capital.value)">Add</button>  
+    </form>
+</div>
