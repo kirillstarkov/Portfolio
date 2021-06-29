@@ -1,0 +1,1 @@
+export interface ICounterEvent {value: number; name: string}
